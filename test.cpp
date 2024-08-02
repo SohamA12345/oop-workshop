@@ -2,34 +2,18 @@
 
 using namespace std;
 
-int* foo() {
-  int a = 897;
-  int* p = &a;
-
-  int* q = new int;
-  *q = 587;
-
-  return p;
-}
-
-void bar() {
-  return;
-}
-
 int main() {
-  int* k = foo();
+  int* a = new int [3];
 
-  cout << ++(*k) << endl;
+  int* b;
 
-  cout << *k << endl;
-  cout << &k << endl;
+  b = a;
 
-  int a = 5;
+  for (int i = 0; i < 3; i++) {
+    cout << b[i] << " ";
+  }
 
-  cout << *k << endl;
-  cout << &k << endl;
-
-  delete k;
+  cout << endl;
 
   return 0;
 }
