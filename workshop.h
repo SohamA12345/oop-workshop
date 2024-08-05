@@ -14,8 +14,8 @@ void printArray(double* array, int a) {
 }
 
 //Part 4
-int arrayMax(double* array, int n) {
-  int max = *(array);
+double arrayMax(double* array, int n) {
+  double max = *(array);
 
   for (int i = 0; i < n; i++) {
     if (max < *(array + i)) {
