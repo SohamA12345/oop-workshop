@@ -8,7 +8,7 @@ void changeValue(double* value) {
 //Part 3
 void printArray(double* array, int a) {
   for(int i = 0; i < a; i++) {
-    std::cout << *(array + i) << '\t';
+    std::cout << *(array + i) << ' ';
   }
   std::cout << std::endl;
 }
