@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Classes define behavior of objects and thier states.
 class Student {
   private: // Cannot be accessed by other parts of the code.
     string name; // Members variables or states
@@ -10,7 +11,7 @@ class Student {
     double grade;
 
   public:
-    // Construct function initialises the private variables.
+    // Construct function initialises the private variables. Best to separate definition from declaration.
     Student(string s_name, int s_ID, double s_grade);
 
     // Or
@@ -29,7 +30,7 @@ class Student {
     // void set_ID (int new_ID) {ID = new_ID;}
     void set_grade(double new_grade) {grade = new_grade;}
 
-    bool is_pass();
+    bool is_pass(); // Best to separate member functions if even slightly complex.
 };
 
 Student::Student(string s_name, int s_ID, double s_grade) {
@@ -47,6 +48,7 @@ bool Student::is_pass() {
 }
 
 int main() {
+  // Object instantiated.
   Student s1("Soham", 1922802, 100.00); // Construct must be there while instantiating a class.
 
   s1.set_name("Ham");
