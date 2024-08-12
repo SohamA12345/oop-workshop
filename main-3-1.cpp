@@ -8,4 +8,7 @@ int main () {
   int* numbers2 = readNumbers();
 
   std::cout << std::boolalpha << equalsArray(numbers1, numbers2, 10) << std::endl;
+
+  delete [] numbers1;
+  delete [] numbers2;
 }
