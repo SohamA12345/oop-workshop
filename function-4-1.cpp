@@ -120,28 +120,22 @@ int *reverseArray(int *numbers1,int length) {
 
 int secondSmallestSum(int *numbers,int length) {
   int sum_i = 0;
-  int smallest;
-  int second_smallest;
-
-  if (numbers[0] < numbers[1]) {
-    smallest = numbers[0];
-    second_smallest = numbers[1];
-  } else {
-    smallest = numbers[1];
-    second_smallest = numbers[0];
-  }
+  int smallest = numbers[0];
+  int second_smallest = numbers[1];
 
   for (int i = 0; i < length; i++) {
     for (int j = i; j < length; j++) {
-      sum_i += numbers[i];
+      sum_i += numbers[j];
+
+      if (smallest > sum_i) {
+        smallest = second_smallest;
+        smallest = sum_i;
+      } else if (second_smallest > sum_i) {
+        second_smallest = sum_i;
+      }
     }
 
-    if (smallest > sum_i) {
-      smallest = sum_i;
-      break;
-    } else if (second_smallest > sum_i) {
-      second_smallest = sum_i;
-    }
+    sum_i = 0;
   }
 
   return second_smallest;
