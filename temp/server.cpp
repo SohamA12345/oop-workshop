@@ -1,3 +1,8 @@
+#include "Justtrying.h"
+
+#ifndef SERVER_DECLARATION
+#define SERVER_DECLARATION
+
 #include <string>
 #include <iostream>
 
@@ -23,8 +28,23 @@ class Server
         cout << "Try another password" << endl;
       }
     }
+
+    // Server();
+    // ~Server();
 };
 
-void Justtrying() {
+// Server::Server() {
+  
+// }
+
+// Server::~Server() {
+
+// }
+
+#endif
+
+int Justtrying() { // Declaration of a function
   cout << "Called a function" << endl;
+  return 0;
+
 }

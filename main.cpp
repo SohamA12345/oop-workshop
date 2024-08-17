@@ -1,5 +1,7 @@
 #include <iostream> //<> bracket include file in the "include" folder
-#include "temp/server.cpp" //"" includes a file from given directory when compiled together
+#include "Justtrying.h"
+#include "temp/server.cpp" //"" includes a file from given path when compiled together
+
 
 using namespace std;
 
