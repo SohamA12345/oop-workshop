@@ -33,11 +33,14 @@ class Student {
     bool is_pass(); // Best to separate member functions if even slightly complex.
 };
 
+Student::Student(string s_name, int s_ID, double s_grade) : name(s_name), ID(s_ID), grade(s_grade) {}
+/*Or 
 Student::Student(string s_name, int s_ID, double s_grade) {
   name = s_name;
   ID = s_ID;
   grade = s_grade;
 }
+*/
 
 bool Student::is_pass() {
   if (grade < 50) {

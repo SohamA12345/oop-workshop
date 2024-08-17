@@ -51,7 +51,7 @@ Classroom::Classroom() {
   student_records = new Student[class_size];
 }
 
-Classroom::Classroom(int a_class_size): class_size(a_class_size) {
+Classroom::Classroom(int a_class_size) : class_size(a_class_size) {
   student_records = new Student[class_size];
 }
 
