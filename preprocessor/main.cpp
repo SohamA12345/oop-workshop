@@ -6,7 +6,10 @@
 
 using namespace std;
 
+#define MAX_ARRAY_SIZE 6 // Defines a value during compilation
+
 int main() {
+  int array[MAX_ARRAY_SIZE]; // Cannot redifine or assign value to MAX_ARRAY_SIZE
   Server test;
   string pasword;
 
