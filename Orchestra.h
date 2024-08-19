@@ -7,7 +7,7 @@
 class Orchestra {
   private:
     int max_size;
-    int size = 0;
+    int size;
     Musician* musicians;
   public:
   Orchestra();           // default constructor
