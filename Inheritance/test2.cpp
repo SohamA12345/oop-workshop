@@ -29,14 +29,14 @@ class Book : public Publication {
     Publication(title, author, year), publisher(publisher), num_pages(num_pages), ISBN(ISBN) {}
     Book() : Book("No title", "No Author", 0, " ", 0, 0) {}
 
-    // void print() { // Modifying method
+    // void print() { // Overriding method is one function in the child replaces another with the same name and signature in the parent. !Requires inheritance
     //   Publication::print(); // Reusablity
     //   cout << "Publisher : " << this->publisher << endl;
     //   cout << "Num_pages : " << this->num_pages << endl;
     //   cout << "ISBN : " << this->ISBN << endl;
     // }
 
-    void print(bool short_print) { // Overloading
+    void print(bool short_print) { // Overloading is separate functions share the same name with different signature !Does not require inheritance. 
       if (short_print) {
         Publication::print();
       } else {
