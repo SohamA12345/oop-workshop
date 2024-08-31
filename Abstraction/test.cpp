@@ -7,8 +7,12 @@ struct Point {
   double y;
 };
 
+class Printable{ // Pure abstract class to make a interface
+  public:
+    virtual void print() = 0; // The purpose of a interface is to implement a feature in all classes.
+};
 
-class Shape {
+class Shape : public Printable {
   protected:
     Point _centre; // Whenever require to access a parent class's variable members, a constructer must be used.
 
@@ -32,7 +36,11 @@ class Square : public Shape {
 
     Square(double x, double y, double side) : Shape(x,y), side(side) {}
 
-    double get_area() {return side * side;}
+    double get_area() {return side * side;} // Must have this or turns into abstract class
+
+    void print() { // Must have this or turns into abstract class
+      cout << "This is a square with side = " << side << endl;
+    }
 };
 
 class Circle : public Shape {
@@ -43,11 +51,31 @@ class Circle : public Shape {
 
     Circle(double x, double y, double r) : Shape(x,y), r(r) {}
 
-    double get_area() {return r * r * 3.14;}
+    double get_area() {return r * r * 3.14;} // Must have this or turns into abstract class
+
+    void print() { // Must have this or turns into abstract class
+      cout << "This is a circle with r = " << r << endl;
+    }
 };
 
 void test(Shape* s) {
   cout << "The area is:" << s->get_area() << endl;
+}
+
+class Person : public Printable {
+  private:
+    string name;
+  public:
+    string get_name() {return name;}
+    void set_name(string name) {this->name = name;}
+
+    void print() { // Must have this or turns into abstract class
+      cout << "This is a person named: " << name << endl;
+    }
+};
+
+void print_summary(Printable* obj) { //Garentees that the obj is printable and has print function.
+  obj->print();
 }
 
 int main() {
@@ -61,6 +89,14 @@ int main() {
 
   test(square);
   test(circle);
+
+  Person* person = new Person(); // Must be a pointer as using polymorphism.
+
+  person->set_name("Feras");
+
+  print_summary(person);
+  print_summary(square);
+  print_summary(circle);
 
   return 0;
 }
