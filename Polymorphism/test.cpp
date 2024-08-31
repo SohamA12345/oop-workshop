@@ -12,7 +12,7 @@ class A {
     virtual void print() {cout << "S = " << this->_s << endl;} // Runtime polymorphism aka dynamic or late binding.
     // Tells the compiler to "wait" until function is used in the program.
     // Decide which definition to use based on calling object
-};
+}; // For polymorphism we require a classes, base class pointer pointing at child class, and virtual function in the base.
 
 class B : public A {
   private:
