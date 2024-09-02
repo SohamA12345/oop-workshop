@@ -18,7 +18,7 @@ bool House::addAppliance(Appliance* appliance) {
 
 double House::getTotalPowerConsumption() {
   int sum = 0;
-  for (int i = 0; i < appliance_counter; i++) {
+  for (int i = 0; i <= appliance_counter; i++) {
     sum += appliances[i]->getPowerConsumption();
   }
   return sum;
