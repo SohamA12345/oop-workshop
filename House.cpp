@@ -7,7 +7,7 @@ House::House(int numAppliances) : numAppliances(numAppliances), appliance_counte
 }
 
 bool House::addAppliance(Appliance* appliance) {
-  if (numAppliances < appliance_counter) {
+  if (appliance_counter < numAppliances) {
     appliances[appliance_counter] = appliance;
     appliance_counter++;
     return true;
