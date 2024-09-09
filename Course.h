@@ -6,10 +6,12 @@
 #include <string>
 
 class Course {
- protected:
-  Person** persons;
-  std::string name;
-	int id;
+	protected:
+		Person** persons;
+		std::string name;
+		int id;
+	public:
+		void addPerson(Person* p);
 };
 
 #endif
