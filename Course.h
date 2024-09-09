@@ -8,7 +8,7 @@
 class Course {
  protected:
   Person** persons;
-  string name;
+  std::string name;
 	int id;
 };
 
