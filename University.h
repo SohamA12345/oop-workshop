@@ -6,7 +6,7 @@
 #include "Course.h"
 
 class University {
-      private: 
+      protected: 
         std::vector <Course> courses;
         std::string name;
         std::string location;
