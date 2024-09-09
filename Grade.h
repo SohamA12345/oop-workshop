@@ -4,11 +4,14 @@
 #include <string>
 
 class Grade {
-	protected:
+	public:
 		int student_id;
 		int value;
 		std::string assignment;
-	public:
+
+		Grade();
+		Grade(int student_id, int value, std::string assignment);
+		~Grade();
 };
 
 #endif
