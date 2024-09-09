@@ -1,14 +1,11 @@
 #include "Gradebook.h"
 
-Gradebook::Gradebook(/* args */) {
+Gradebook::Gradebook() {
 
 }
 
 void Gradebook::addGrade(int stud_id, int course_id, std::string assignment, int value) {
-  this->stud_id = stud_id;
-  this->course_id = course_id;
-  this->assignment = assignment;
-  this->value = value;
+  grades = new Grade(stud_id, value, assignment, course_id);
 }
 
 Gradebook::~Gradebook()
