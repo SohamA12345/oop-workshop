@@ -12,6 +12,7 @@ protected:
   int value;
 public:
   Gradebook(/* args */);
+  void addGrade(int stud_id, int course_id, std::string assignment, int value);
   ~Gradebook();
 };
 

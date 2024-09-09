@@ -1,10 +1,13 @@
 #ifndef GRADE_H
 #define GRADE_H
 
-class Grade {
+#include <string>
 
-      private: 
-         int student_id;
+class Grade {
+ private:
+  int student_id;
+  int value;
+  std::string assignment;
 };
 
 #endif
