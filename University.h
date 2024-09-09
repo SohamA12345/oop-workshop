@@ -11,7 +11,7 @@ class University {
   std::vector<Course> courses;
   std::string name;
   std::string location;
-  
+
   University();
   University(std::string name, std::string location);
   void addCourse(int id, std::string name);

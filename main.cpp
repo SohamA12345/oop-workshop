@@ -7,10 +7,11 @@
 
 int main() {
   University Flinders;
+  Person* feras = new Person ("Feras");
 
   Flinders.addCourse(1234, "foo");
 
-  Flinders.courses
+  Flinders.courses[1234].addPerson(feras);
 
   return 0;
 }

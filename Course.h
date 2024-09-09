@@ -1,17 +1,17 @@
 #ifndef COURSE_H
 #define COURSE_H
 
-#include "Instructor.h"
-#include "Person.h"
 #include <string>
 
+#include "Instructor.h"
+#include "Person.h"
+
 class Course {
-	protected:
-		Person** persons;
-		std::string name;
-		int id;
-	public:
-		void addPerson(Person* p);
+ public:
+  Person** persons;
+  std::string name;
+  int id;
+  void addPerson(Person* p);
 };
 
 #endif
