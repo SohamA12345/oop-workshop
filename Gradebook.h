@@ -5,13 +5,13 @@
 
 class Gradebook
 {
-protected:
+public:
   int stud_id;
   int course_id;
   std::string assignment;
   int value;
-public:
-  Gradebook(/* args */);
+
+  Gradebook();
   void addGrade(int stud_id, int course_id, std::string assignment, int value);
   ~Gradebook();
 };
