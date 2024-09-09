@@ -10,5 +10,7 @@ int main() {
 
   Flinders.addCourse(1234, "foo");
 
+  Flinders.courses
+
   return 0;
 }
