@@ -9,6 +9,7 @@ class Student : public Person
     int id;
   public:
     Student();
+    Student(int id);
     ~Student();
 };
 

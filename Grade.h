@@ -2,6 +2,8 @@
 #define GRADE_H
 
 #include <string>
+#include "Student.h"
+#include "Course.h"
 
 class Grade {
 	public:
