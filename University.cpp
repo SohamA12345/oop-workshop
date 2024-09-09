@@ -10,5 +10,5 @@ University::University(std::string name, std::string location) {
 }
 
 void University::addCourse(int id, std::string name) {
-  course.push_back(Courses[id]);
+  courses.push_back(courses[id, name]);
 }
