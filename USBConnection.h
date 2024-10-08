@@ -20,6 +20,8 @@ public:
 
     // Static method to destroy a USBConnection object
     static void destroy(USBConnection* connection);
+
+    void get_id();
 };
 
 #endif // USBCONNECTION_H
