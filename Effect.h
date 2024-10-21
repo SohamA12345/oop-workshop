@@ -1,3 +1,6 @@
+#ifndef EFFECT_H
+#define EFFECT_H
+
 #include "GameEntity.h"
 
 class Effect
@@ -17,3 +20,5 @@ Effect::Effect(/* args */)
 Effect::~Effect()
 {
 }
+
+#endif

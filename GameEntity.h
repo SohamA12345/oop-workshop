@@ -1,3 +1,6 @@
+#ifndef GAME_ENTITY_H
+#define GAME_ENTITY_H
+
 #include <tuple>
 
 using namespace std;
@@ -27,6 +30,12 @@ class GameEntity {
     }
   }
 
+  void setPos(int x, int y) {
+    position = make_tuple(x,y);
+  };
+
+  void setType(GameEntityType type) {this->type = type;}
+
   tuple<int, int> getPos() {return position;}
 
   GameEntityType getType() {return type;}
@@ -34,3 +43,5 @@ class GameEntity {
   GameEntity(/* args */) {}
   ~GameEntity() {}
 };
+
+#endif

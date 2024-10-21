@@ -1,3 +1,6 @@
+#ifndef UTILS_H
+#define UTILS_H
+
 #include "GameEntity.h"
 #include "time.h"
 #include <random>
@@ -34,3 +37,4 @@ Utils::Utils(/* args */)
 Utils::~Utils()
 {
 }
+#endif
