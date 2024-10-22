@@ -7,11 +7,14 @@
 class Mine : public GameEntity
 {
 private:
-  /* data */
+  int x,y;
 public:
-  Mine(int x, int y) : GameEntity(x, y, 'M') {}
+  Mine(int x, int y) : GameEntity(x, y, 'M') {
+    this->x = x;
+    this->y = y;
+  }
   Explosion explode() {
-    Explosion obj;
+    Explosion obj(x, y);
     setType(GameEntityType::NoneType);
     return obj;
   }
