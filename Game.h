@@ -37,31 +37,29 @@ class Game {
 
   void gameLoop(int maxIterations, double mineDistanceThreshold) {
     for (int i = 0; i < maxIterations; i++) {
-      int numShips = 0;
+        int numShips = 0;
+        for (int j = 0; j < entities.size(); j++) {
+            if (entities[j]->getType() == GameEntityType::ShipType) {
+                numShips++;
+                Ship* ship = static_cast<Ship*>(entities[j]);  // Use the existing ship instance
+                ship->move(1, 0);  // Move the ship
 
-      for (int j = 0; j < entities.size(); j++) {
-        if (entities[j]->getType() == GameEntityType::ShipType) {
-          numShips++;
-          Ship* ship = new Ship(get<0>(entities[j]->getPos()), get<1>(entities[j]->getPos()));
-          ship->move(1,0);
-
-          for (int k = 0; k < entities.size(); k++) {
-            if (entities[k]->getType() == GameEntityType::MineType && Utils::calculateDistance(entities[k]->getPos(), ship->getPos()) < mineDistanceThreshold) {
-              Mine* mine = new Mine(get<0>(entities[k]->getPos()), get<1>(entities[k]->getPos()));
-              Explosion obj = mine->explode();
-              obj.apply(*ship);
+                for (int k = 0; k < entities.size(); k++) {
+                    if (entities[k]->getType() == GameEntityType::MineType && 
+                        Utils::calculateDistance(entities[k]->getPos(), ship->getPos()) < mineDistanceThreshold) {
+                        Mine* mine = static_cast<Mine*>(entities[k]);
+                        Explosion obj = mine->explode();
+                        obj.apply(*ship);
+                    }
+                }
             }
-          }
-
-          entities[j] = ship;
         }
-      }
-
-      if (numShips == 0) {
-        return;
-      }
+        if (numShips == 0) {
+            return;
+        }
     }
-  }
+}
+
 
   Game(/* args */);
   ~Game();
