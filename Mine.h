@@ -9,7 +9,7 @@ class Mine : public GameEntity
 private:
   /* data */
 public:
-  Mine(tuple<int, int> position) : GameEntity(get<0>(position), get<1>(position), 'M') {}
+  Mine(int x, int y) : GameEntity(x, y, 'M') {}
   Explosion explode() {
     Explosion obj;
     setType(GameEntityType::NoneType);

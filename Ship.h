@@ -8,7 +8,7 @@ class Ship : public GameEntity
 private:
   /* data */
 public:
-  Ship(tuple<int, int> position) : GameEntity(get<0>(position), get<1>(position), 'S') {}
+  Ship(int x, int y) : GameEntity(x, y, 'S') {}
 
   void move(int dx, int dy) {
     int x = get<0>(getPos()) + dx;

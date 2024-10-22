@@ -9,7 +9,7 @@ class Explosion : public GameEntity, public Effect
 private:
   /* data */
 public:
-  Explosion(tuple<int,int> position) : GameEntity(get<0>(position), get<1>(position), 'E') {}
+  Explosion(int x, int y) : GameEntity(x, y, 'E') {}
 
   void apply(GameEntity& entity) {
     entity.setPos(-1,-1);
