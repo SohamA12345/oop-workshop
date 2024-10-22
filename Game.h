@@ -21,14 +21,14 @@ class Game {
     for (int i = 0; i < numShips; i++) {
       tuple<int, int> position =
           Utils::generateRandomPos(gridWidth, gridHieght);
-      Ship* obj = new Ship(position);
+      Ship* obj = new Ship(get<0>(position), get<1>(position));
       entities.push_back(obj);
     }
 
     for (int i = 0; i < numMines; i++) {
       tuple<int, int> position =
           Utils::generateRandomPos(gridWidth, gridHieght);
-      Mine* obj = new Mine(position);
+      Mine* obj = new Mine(get<0>(position), get<1>(position));
       entities.push_back(obj);
     }
 
@@ -42,12 +42,12 @@ class Game {
       for (int j = 0; j < entities.size(); j++) {
         if (entities[j]->getType() == GameEntityType::ShipType) {
           numShips++;
-          Ship* ship = new Ship(entities[j]->getPos());
+          Ship* ship = new Ship(get<0>(entities[j]->getPos()), get<1>(entities[j]->getPos()));
           ship->move(1,0);
 
           for (int k = 0; k < entities.size(); k++) {
             if (entities[k]->getType() == GameEntityType::MineType && Utils::calculateDistance(entities[k]->getPos(), ship->getPos()) < mineDistanceThreshold) {
-              Mine* mine = new Mine(entities[k]->getPos());
+              Mine* mine = new Mine(get<0>(entities[k]->getPos()), get<1>(entities[k]->getPos()));
               Explosion obj = mine->explode();
               obj.apply(*ship);
             }
