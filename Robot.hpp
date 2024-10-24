@@ -25,7 +25,7 @@ void takeHit() {
 bool move(int xOffset, int yOffset) {
   if (yOffset == 0) {
     x += xOffset;
-    if (x >= 0 && x<getGridWidth()) {
+    if (x >= 0 && x<=getGridWidth()) {
       return true;
     }
     x -= xOffset;

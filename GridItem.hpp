@@ -12,7 +12,7 @@ private:
 public:
   int x, y, width, hieght;
   static int Itemcount;
-  GridItem(int x, int y, int width, int height) : GridItem() {
+  GridItem(int x, int y, int width, int height) {
     this->x = x;
     this->y = y;
     this->width = width;
