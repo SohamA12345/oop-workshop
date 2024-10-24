@@ -37,4 +37,6 @@ public:
   }
 };
 
+int Interactable::ItemcountInter;
+
 #endif
