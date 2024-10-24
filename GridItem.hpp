@@ -2,8 +2,6 @@
 
 using namespace std;
 
-int GridItem::Itemcount;
-
 class GridItem
 {
 private:
@@ -40,3 +38,5 @@ public:
     this->Itemcount++;
   }
 };
+
+int GridItem::Itemcount;
