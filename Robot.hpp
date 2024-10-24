@@ -11,6 +11,8 @@ public:
   Robot(int gridWidth, int gridHeight) : health(3) {
     x = 0;
     y = 0;
+    gridHeight = gridHeight;
+    gridWidth = gridWidth;
   }
   int getHealth() {
     return health;
@@ -23,10 +25,16 @@ void takeHit() {
 bool move(int xOffset, int yOffset) {
   if (yOffset == 0) {
     x += xOffset;
-    return true;
+    if (x > 0 && x<getGridWidth()) {
+      return true;
+    }
+    x -= xOffset;
   } else if (xOffset == 0) {
     y += yOffset;
-    return true;
+    if (y > 0 && x<getGridHeight()) {
+      return true;
+    }
+    y -= yOffset;
   }
   return false;
 }
