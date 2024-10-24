@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP_4
+#define GRID_ITEM_HPP_4
+
 #include "Interactable.hpp"
 #include "Helper.hpp"
 
@@ -22,3 +25,4 @@ public:
   Goal(/* args */);
   ~Goal();
 };
+#endif

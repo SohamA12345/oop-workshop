@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP_1
+#define GRID_ITEM_HPP_1
+
 #include <utility>
 #include <cmath>
 
@@ -16,3 +19,5 @@ public:
   Helper(/* args */) {}
   ~Helper() {}
 };
+
+#endif

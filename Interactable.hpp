@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP_3
+#define GRID_ITEM_HPP_3
+
 #include "GridItem.hpp"
 #include "Robot.hpp"
 enum InteractableType {
@@ -33,3 +36,5 @@ public:
     ItemcountInter--;
   }
 };
+
+#endif

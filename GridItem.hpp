@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP
+#define GRID_ITEM_HPP
+
 #include <utility>
 
 using namespace std;
@@ -41,3 +44,5 @@ public:
 };
 
 int GridItem::Itemcount;
+
+#endif

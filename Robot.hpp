@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP_2
+#define GRID_ITEM_HPP_2
+
 #include "GridItem.hpp"
 
 class Robot : public GridItem
@@ -30,3 +33,5 @@ bool move(int xOffset, int yOffset) {
   Robot(/* args */) {}
   ~Robot() {}
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef GRID_ITEM_HPP_5
+#define GRID_ITEM_HPP_5
+
 #include "Interactable.hpp"
 #include "Helper.hpp"
 
@@ -29,3 +32,5 @@ public:
   Obstacle(/* args */);
   ~Obstacle();
 };
+
+#endif
