@@ -16,7 +16,16 @@ void takeHit() {
     health--;
   }
 } // decrements the health of the robot. The robot cannot have negative health
-bool move(int xOffset, int yOffset) {}
+bool move(int xOffset, int yOffset) {
+  if (yOffset == 0) {
+    x += xOffset;
+    return true;
+  } else if (xOffset == 0) {
+    y += yOffset;
+    return true;
+  }
+  return false;
+}
   Robot(/* args */) {}
   ~Robot() {}
 };
