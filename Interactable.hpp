@@ -1,5 +1,5 @@
 #include "GridItem.hpp"
-
+#include "Robot.hpp"
 enum InteractableType {
   GOAL,
   OBSTACLE
@@ -10,7 +10,26 @@ class Interactable : public GridItem
 private:
   /* data */
 public:
-  Interactable(int x, int y, int width, int height) {}
-  Interactable(/* args */) {}
-  ~Interactable() {}
+  static int ItemcountInter;
+  Interactable(int x, int y, int width, int height) {
+    x = x;
+    y=y;
+    width = width;
+    height = height;
+  }
+  Interactable(/* args */) {
+    x = 0;
+    y = 0;
+    width = 0;
+    hieght = 0;
+    ItemcountInter++;
+  }
+  virtual bool interact(Robot* player) = 0;
+  virtual InteractableType getType() = 0;
+  int getActiveInteractableCount() {
+    return ItemcountInter;
+  }
+  ~Interactable() {
+    ItemcountInter--;
+  }
 };
