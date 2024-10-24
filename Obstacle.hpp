@@ -29,8 +29,8 @@ public:
   InteractableType getType() {
     return InteractableType::OBSTACLE;
   }
-  Obstacle(/* args */);
-  ~Obstacle();
+  Obstacle(/* args */) {}
+  ~Obstacle() {}
 };
 
 #endif

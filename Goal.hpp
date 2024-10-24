@@ -22,7 +22,7 @@ public:
   InteractableType getType() {
     return InteractableType::GOAL;
   }
-  Goal(/* args */);
-  ~Goal();
+  Goal(/* args */) {}
+  ~Goal() {}
 };
 #endif
