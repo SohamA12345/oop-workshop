@@ -17,6 +17,7 @@ public:
     this->y = y;
     this->width = width;
     this->hieght = hieght;
+    this->Itemcount--;
   }
 
   void setCoordinates(int x, int y) {
