@@ -22,7 +22,7 @@ public:
       return true;
     } else if (distance == 0) {
       player->takeHit();
-      return;
+      return false;
     } else {return false;}
   }
 
