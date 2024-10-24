@@ -31,7 +31,7 @@ bool move(int xOffset, int yOffset) {
     x -= xOffset;
   } else if (xOffset == 0) {
     y += yOffset;
-    if (y > 0 && x<getGridHeight()) {
+    if (y > 0 && y<getGridHeight()) {
       return true;
     }
     y -= yOffset;
