@@ -21,7 +21,12 @@ public:
   Game(int width, int height, std::vector<std::pair<int, int>> obstacleCoordinates) {
     width = width;
     height = height;
-    
+    Robot(0, 0);
+    Goal(width-1, height-1);
+    for (int i = 0; i < obstacleCoordinates.size(); i++) {
+      Obstacle(obstacleCoordinates[i].first, obstacleCoordinates[i].second, width, height);
+    }
+    GameState::PLAYING;
   }
   Game(/* args */);
   ~Game();
