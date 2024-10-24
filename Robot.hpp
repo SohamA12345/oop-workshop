@@ -3,10 +3,11 @@
 class Robot : public GridItem
 {
 private:
-  int x, y, health;
+  int health;
 public:
-  Robot(int gridWidth, int gridHeight) : x(0), y(0), health(3) {
-
+  Robot(int gridWidth, int gridHeight) : health(3) {
+    x = 0;
+    y = 0;
   }
   int getHealth() {
     return health;

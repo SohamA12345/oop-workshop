@@ -5,9 +5,9 @@ using namespace std;
 class GridItem
 {
 private:
-  int x, y, width, hieght;
 
 public:
+  int x, y, width, hieght;
   static int Itemcount;
   GridItem(int x, int y, int width, int height) : GridItem() {
     this->x = x;
