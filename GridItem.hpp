@@ -37,7 +37,7 @@ public:
     this->y = 0;
     this->width = 0;
     this->hieght = 0;
-    this->Itemcount++;
+    //this->Itemcount++;
   }
 };
 

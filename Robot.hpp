@@ -12,7 +12,9 @@ public:
     return health;
   } // gets the current health of the robot
 void takeHit() {
-  
+  if (health > 0) {
+    health--;
+  }
 } // decrements the health of the robot. The robot cannot have negative health
 bool move(int xOffset, int yOffset) {}
   Robot(/* args */) {}
