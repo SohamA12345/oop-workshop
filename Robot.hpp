@@ -3,11 +3,18 @@
 class Robot : public GridItem
 {
 private:
-  /* data */
+  int x, y, health;
 public:
-  Robot(int gridWidth, int gridHeight) :  {
+  Robot(int gridWidth, int gridHeight) : x(0), y(0), health(3) {
 
   }
+  int getHealth() {
+    return health;
+  } // gets the current health of the robot
+void takeHit() {
+  
+} // decrements the health of the robot. The robot cannot have negative health
+bool move(int xOffset, int yOffset) {}
   Robot(/* args */) {}
   ~Robot() {}
 };

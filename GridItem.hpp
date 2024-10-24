@@ -14,6 +14,7 @@ public:
     this->y = y;
     this->width = width;
     this->hieght = hieght;
+    Itemcount++;
   }
 
   void setCoordinates(int x, int y) {
@@ -26,6 +27,7 @@ public:
   int getGridWidth() {return width;}
   int getGridHeight() {return hieght;}
   int getActiveGridItemCount() {return Itemcount;}
+
   virtual ~GridItem() {
     this->Itemcount--;
   }
