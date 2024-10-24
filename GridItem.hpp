@@ -6,8 +6,9 @@ class GridItem
 {
 private:
   int x, y, width, hieght;
-  static int Itemcount;
+
 public:
+  static int Itemcount;
   GridItem(int x, int y, int width, int height) : GridItem() {
     this->x = x;
     this->y = y;
@@ -37,3 +38,5 @@ public:
     this->Itemcount++;
   }
 };
+
+int GridItem::Itemcount;
