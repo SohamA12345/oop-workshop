@@ -1,5 +1,7 @@
 #include <utility>
 
+using namespace std;
+
 class GridItem
 {
 private:
@@ -13,8 +15,13 @@ public:
     this->hieght = hieght;
   }
 
-  void setCoordinates(int x, int y) {}
-  std::pair<int,int> getCoordinates() {}
+  void setCoordinates(int x, int y) {
+    this->x = x;
+    this->y = y;
+  }
+  std::pair<int,int> getCoordinates() {
+    return make_pair(x,y);
+  }
   int getGridWidth() {return width;}
   int getGridHeight() {return hieght;}
   int getActiveGridItemCount() {}
