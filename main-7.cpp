@@ -3,7 +3,7 @@
 
 using namespace std;
 
-template <int SIZE, typename T>
+template <int SIZE, typename T> // These parameters are selected in runtime, thus SIZE is constant and not lead to variable length array issue.
 class MyArray
 {
   public:
